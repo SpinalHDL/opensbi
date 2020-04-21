@@ -14,7 +14,6 @@
 #include <sbi/sbi_const.h>
 #include <sbi/sbi_hart.h>
 #include <sbi/sbi_platform.h>
-#include <sbi_utils/fdt/fdt_fixup.h>
 #include <sbi_utils/irqchip/plic.h>
 #include <sbi_utils/serial/uart8250.h>
 #include <sbi_utils/sys/clint.h>
@@ -30,6 +29,8 @@
 #define VEX_REPORT_ADDR ((volatile void *) 0xF8000000)
 #define VEX_REPORT_END 0x08
 #define VEX_CLINT_ADDR 0xF0010000
+
+#define VEX_HART_STACK_SIZE		8192
 
 
 
@@ -139,7 +140,7 @@ const struct sbi_platform platform = {
 	.name			    = "VexRiscv SMP simulation",
 	.features		    = VEX_PLATFORM_FEATURES,
 	.hart_count		    = VEX_HART_COUNT,
-	.hart_stack_size	= SBI_PLATFORM_DEFAULT_HART_STACK_SIZE,
+	.hart_stack_size	= VEX_HART_STACK_SIZE,
 	.platform_ops_addr	= (unsigned long)&platform_ops
 };
 
