@@ -130,8 +130,7 @@ const struct sbi_platform_operations platform_ops = {
 	.timer_event_stop	= clint_timer_event_stop,
 	.timer_event_start	= clint_timer_event_start,
 	.timer_init			= vex_timer_init,
-	.system_reboot		= vex_system_down,
-	.system_shutdown	= vex_system_down
+	.system_reset		= vex_system_down
 };
 
 const struct sbi_platform platform = {
