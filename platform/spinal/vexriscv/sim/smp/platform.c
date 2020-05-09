@@ -38,6 +38,7 @@
 
 static int vex_final_init(bool cold_boot)
 {
+	csr_write(CSR_STVAL, 0); //Make simulation deterministic
 	return 0;
 }
 
