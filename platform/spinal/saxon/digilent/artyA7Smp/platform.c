@@ -30,8 +30,8 @@
 #include <soc.h>
 #define UART_DATA 0x00
 #define UART_STATUS 0x04
-#define VEX_CLINT_ADDR SYSTEM_CLINT_BUS
-#define VEX_UART_ADDR ((void*)SYSTEM_UART_A_BUS)
+#define VEX_CLINT_ADDR SYSTEM_CLINT_CTRL
+#define VEX_UART_ADDR ((void*)SYSTEM_UART_A_CTRL)
 
 
 /* clang-format on */
