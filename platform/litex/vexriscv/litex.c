@@ -10,7 +10,8 @@
 
 
 #include <generated/csr.h>
-#include <hw/flags.h>
+#include <base/uart.h>
+
 
 void vex_putc(char c){
 	while (uart_txfull_read());
@@ -19,7 +20,7 @@ void vex_putc(char c){
 }
 
 int vex_getc(void){
-	char c;
+	char c = 0;
 	if (uart_rxempty_read()) return -1;
 	c = uart_rxtx_read();
 	uart_ev_pending_write(UART_EV_RX);

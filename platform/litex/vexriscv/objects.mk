@@ -9,6 +9,7 @@
 
 platform-objs-y += platform.o
 platform-objs-y += litex.o
-platform-genflags-y += -I$(LITEX_INCLUDE)
-platform-genflags-y += -I$(LITEX_INSTALL)/litex/soc/software/include
+platform-genflags-y += -I$(LITEX_BUILD)/software/include
+platform-genflags-y += -I$(LITEX_INSTALL)/litex/litex/soc/software/include
+platform-genflags-y += -I$(LITEX_INSTALL)/litex/litex/soc/cores/cpu/vexriscv_smp
 
