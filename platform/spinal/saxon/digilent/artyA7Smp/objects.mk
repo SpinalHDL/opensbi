@@ -8,5 +8,5 @@
 #
 
 platform-objs-y += platform.o
-platform-genflags-y += "-I$(SAXON_PATH)/bsp/$(BSP)/include"
+platform-genflags-y += "-I$(SAXON_BSP_PATH)/include"
 platform-genflags-y += "-I$(SAXON_PATH)/software/standalone/driver"
